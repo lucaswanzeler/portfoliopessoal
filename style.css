@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 4% 15%;
+}
+body{
+    /* height: 100vh; */ /*utiliza todo o tamanho da altura página (testar com
+inspector object*/
+    box-sizing: border-box; /*com essa configuração todos os elementos filhos
+(tags) estarão contidos no Pai*/
+background-color: var(--cor-primaria);
+color: var(--cor-secundaria);
+}
+
+.titulo-destaque{
+    color: #22D4FD;
+}
+.apresentacao {
+    display: flex; /*todos os elementos ficam em linha por padrão, mas
+   pode ser configurável*/
+    align-items: center; 
+    /*alinha todos os elementos com base na imagem*/
+    justify-content: space-between; 
+     /*espaço entre os objetos*/
+    margin: 10% 15%; /* quanto maior a
+porcentagem na horizontal mais pertos
+ficam os elementos*/
+}
+.apresentacao__conteudo__titulo{
+    font-size: 2.25 rem; /*1 rem = 16px logo 36 (px)
+   /16 = 2.25 rem */
+    font-family: var(--fonte-primaria);
+   
+}
+.apresentacao__imagem{
+    width: 100%;
+   }
+   .apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column; /*posicionando
+   elementos na vertical*/
+    gap: 40px; /*verificar no Figma*/ /* o
+   gap é o espaçamento entre elementos*/
+   }
+
+   
+.apresentacao__conteudo__texto {
+    font-size: 24px; /*Olhar no projeto do Figma*/
+   }
+   .apresentacao__links {
+    display: flex;
+    justify-content: space-between;
+   }
+   .apresentacao__links__link {
+    background-color: #22D4FD;
+    width: 280px;
+    text-align: center;
+    border-radius: 16px; /*borda
+   arredondada*/
+   font-size: 24px;
+   font-weight: 600;
+   padding: 21.5px 0; /*primeiro valor vertical
+   e segundo valor horizontal*/
+   color: #000000; /*cor do texto*/
+   font-family: 'Montserrat', sans-serif;
+}
+   
+
+.apresentacao__conteudo__texto {
+    font-size: 24px; /*Olhar no projeto do Figma*/
+   }
+   .apresentacao {
+    padding: 5% 15%;
+    display: flex; /*todos os elementos
+   ficam em linha por padrão, mas pode
+   ser configurável*/
+    align-items: center; /*alinha todos
+   os elementos com base na imagem*/
+    justify-content: space-between;
+   /*espaçpo entre os objetos*/
+   gap: 82px; /*Verificar no Figma /
+   Após o GAP a imagem não junta mais ao
+   texto*/
+   }
+   @media (max-width: 1200px) {
+       .apresentacao {
+       flex-direction: column-reverse; /*A imagem
+      ficará em cima como no FIGMA,
+       se colocar apenas column, a imagem ficará
+      em baixo (faça o teste)*/
+       }
+      }
+      
+   
+      .apresentacao__links{
+       display: 50%;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: center;
+       gap: 32px;
+      }   
+   
+   .apresentacao__links__subtitulo {
+       font-family: 'Krona One',sans serif;
+       font-weight: 400;
+       size: 24px;
+      }
+      .apresentacao__links__link{
+        /* background-color: #22D4FD; */
+        display: flex;
+        justify-content: center; /*alinhando no
+       centro*/
+        gap: 16px;
+        border: 2px solid #22D4FD;
+       /*tamanho da linha, tracejado, e
+       cor*/
+        width: 378px;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 21.5px 0;
+        text-decoration: none;
+        color: #F6F6F6;
+        font-family: 'Montserrat',
+       sans-serif;
+       }
+       
+       .apresentacao__links__link:hover {
+        background-color: #272727;
+       }   
+       .rodape {
+        color:#000000;
+        background-color: #22D4FD;
+        padding: 23px;
+        text-align: center;
+        font-family:'Montserrat',sans-serif ;
+        font-size: 24px;
+        font-weight: 400;;
+       }
+       .cabecalho__menu__link {
+        font-family:
+        'Montserrat',sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #22D4FD;
+        text-decoration: none;
+    
+       }
+       .cabecalho{
+        padding:2% 0% 0% 15% ; /*4 valores:
+       1-superior 2-direito 3-inferior 4- lado
+       esquerdo*/
+       }
+       .cabecalho__menu {
+        display: flex;
+        gap: 80px;
+       }
+       :root {
+        --cor-primaria:#000000;
+        --cor-secundaria:#F6F6F6;
+        --cor-tercearia:#22D4FD;
+        --cor-hover: #272727;
+        --fonte-principal:'Krona One', sans-serif;
+     --fonte-secundaria: 'Montserrat',sans-serif ;
+    }
+    .apresentacao__imagem{
+        width: 50%;
+       }
+       .apresentacao__conteudo{
+       width: 50%;
+     display: flex;
+     flex-direction: column;
+     gap: 40px;
+    }
+    @media (max-width: 1200px) {
+        .apresentacao {
+            flex-direction: column-reverse; /*A imagem ficará em cima como no
+            FIGMA,
+             se colocar apenas column, a imagem ficará em baixo (faça o
+            teste)*/
+             padding: 5%;/*Melhorando o espaçamento para dispositivos menores*/
+            
+             }
+             .apresentacao__conteudo{
+                width: auto; /*ocupando a parte da Tag pai que pode preencher ou
+               pode usar 100%*/
+                }
+            
+       }
+    
+       .apresentacao {
+        flex-direction: column-reverse; /*A imagem ficará em cima como no
+       FIGMA,
+        se colocar apenas column, a imagem ficará em baixo (faça o
+       teste)*/
+        padding: 5%;/*Melhorando o espaçamento para dispositivos menores*/
+        
+        }
+        .apresentacao__conteudo{
+        width: auto; /*ocupando a parte da Tag pai que pode preencher ou
+       pode usar 100%*/
+        }
+        
+        
+   
+   
+
+
